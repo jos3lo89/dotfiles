@@ -1,0 +1,51 @@
+gui:
+  # --- TEMA KANSO INK ---
+  theme:
+    activeBorderColor:
+      - "#938AA9" # Violet (Kanso Violet) - Borde activo
+      - bold
+    inactiveBorderColor:
+      - "#5C6066" # Gray5 (Kanso Gray) - Borde inactivo
+    optionsTextColor:
+      - "#7FB4CA" # Blue (Kanso Blue) - Teclas de atajos
+    selectedLineBgColor:
+      - "#393B44" # InkBg3 (Kanso Selection) - Fondo de línea seleccionada
+    cherryPickedCommitBgColor:
+      - "#4b4e57" # InkBg4 - Fondo de commits cherry-picked
+    cherryPickedCommitFgColor:
+      - "#938AA9" # Violet - Texto de commits cherry-picked
+    unstagedChangesColor:
+      - "#C34043" # Red (Kanso Red) - Archivos modificados
+    defaultFgColor:
+      - "#C5C9C7" # Fg (Kanso Foreground) - Texto normal
+    searchingActiveBorderColor:
+      - "#DCA561" # Yellow (Kanso Yellow) - Borde buscando
+
+  # --- CONFIGURACIÓN VISUAL ---
+  commitHashLength: 7 # Largo del hash (0 es completo, 7 es corto estándar)
+  showDivergenceFromBaseBranch: arrowAndNumber # Muestra flechas ⬇12⬆4 si diverges de main
+  showNumstatInFilesView: true # Muestra estadísticas (+24/-5) en la lista de archivos
+  mainPanelSplitMode: vertical # Panel principal dividido verticalmente
+  nerdFontsVersion: "3" # Iconos versión 3
+  scrollHeight: 10 # Velocidad de scroll
+
+  # Colores para ramas específicas (Match con Kanso Colors)
+  branchColorPatterns:
+    "main$": "#98BB6C" # Green (Kanso Green)
+    "master$": "#98BB6C" # Green
+    "develop$": "#7FB4CA" # Blue
+    "feat/.*": "#938AA9" # Violet
+    "fix/.*": "#C34043" # Red
+
+git:
+  parseEmoji: true
+  pagers:
+    - colorArg: always
+      pager: delta --paging=never # Usa delta si lo tienes instalado para diffs bonitos
+  ignoreWhitespaceInDiffView: true
+
+# Desactiva popups molestos al inicio
+disableStartupPopups: true
+notARepository: "quit" # Si no es un repo git, cierra lazygit
+promptToReturnFromSubprocess: false # Al salir de nvim, vuelve directo sin pedir Enter
+
