@@ -1,0 +1,308 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """\
+($directory)\
+$os\
+$username\
+$sudo\
+$git_branch\
+$git_status\
+$fill\
+$battery\
+$bun\
+$c\
+$cpp\
+$conda\
+$container\
+$deno\
+$docker_context\
+$golang\
+$lua\
+$nodejs\
+$package\
+$php\
+$python\
+$cmd_duration\
+$time\
+\n$character\
+"""
+
+add_newline = true
+palette = 'catppuccin_mocha'
+
+[fill]
+symbol = ' '
+
+[character] 
+success_symbol = '[󰘍](bold green)' 
+error_symbol = "[󰘍](bold red)"
+vimcmd_symbol = "[N](bold red)"
+vimcmd_replace_one_symbol = "[R](bold peach)"
+vimcmd_visual_symbol = "[V](bold mauve)"
+
+[username]
+disabled = true
+style_user = 'blue bold'
+style_root = 'yellow bold'
+format = '[ ](bold blue)[$user]($style) '
+show_always = true
+aliases = { "corpuser034g" = "matchai" }
+
+[sudo]
+style = 'bold green'
+symbol = '󰱯 '
+disabled = false
+
+[time]
+disabled = true
+format = '󱑆 [\[ $time \]]($style) '
+time_format = '%T'
+utc_time_offset = '-5'
+time_range = '10:00:00-14:00:00'
+
+[cmd_duration]
+disabled = true
+min_time = 500
+format = 'underwent [$duration](bold yellow)'
+
+
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style) '
+truncation_length = 3
+style = "fg:blue"
+home_symbol = ' '
+read_only_style = 'red'
+before_repo_root_style = "fg:blue"
+truncation_symbol = '…/'
+truncate_to_repo = true
+read_only = ' '
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = "󰋩 "
+"Developer" = "󰲋 "
+
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+symbol = " "
+truncation_length = 4
+truncation_symbol = '…'
+style = 'bold purple'
+# ignore_branches = ['master', 'main']
+
+[git_status]
+format = '[$all_status$ahead_behind ]($style)'
+disabled = false
+style = 'bold red'
+conflicted = '='
+# ahead = '⇡'
+ahead = '⇡ ${count}'
+# diverged = '⇕'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+# behind = '⇣'
+behind = '⇣ ${count}'
+up_to_date = '✓'
+untracked = '?'
+stashed = '\$'
+modified = '!'
+staged = '+'
+renamed = '»'
+deleted = '✘'
+typechanged = ""
+
+
+[package]
+disabled = true
+format = '[is $symbol$version]($style) '
+version_format = 'v${raw}'
+style = 'bold 208'
+
+[nodejs]
+symbol = '󰎙 '
+style = "bold green"
+format = "[$symbol($version )]($style)"
+version_format = 'v${raw}'
+
+[bun]
+symbol = ' '
+style = "bold peach"
+format = "[$symbol($version )]($style)"
+version_format = 'v${raw}'
+
+
+[c]
+symbol = " "
+format = '[$symbol($version(-$name) )]($style)'
+version_format = 'v${raw}'
+style = 'bold 149'
+
+[cpp]
+disabled = false
+format = '[$symbol($version(-$name) )]($style)'
+version_format = 'v${raw}'
+symbol = " "
+style = 'bold 149'
+
+[conda]
+format = '[$symbol$environment]($style) '
+symbol = '🅒 '
+style = 'bold green'
+
+
+[container]
+format = '[$symbol \[$name\]]($style) '
+style = 'bold red dimmed'
+symbol = ' '
+
+[deno]
+format = '[$symbol($version )]($style)'
+symbol = ' '
+style = 'green bold'
+
+[docker_context]
+format = '[$symbol$context]($style) '
+symbol = "󰡨 "
+style = 'blue bold'
+
+[golang]
+format = '[$symbol($version )]($style)'
+style = 'bold blue'
+symbol = " "
+version_format = 'v${raw}'
+
+[lua]
+format = '[$symbol($version )]($style)'
+style = 'bold blue'
+symbol = '󰢱 '
+version_format = 'v${raw}'
+
+[php]
+format = '[$symbol($version )]($style)'
+symbol = " "
+style = '147 bold'
+version_format = 'v${raw}'
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+pyenv_version_name = true
+version_format = 'v${raw}'
+style = 'yellow bold'
+
+# [package]
+
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[palettes.catppuccin_frappe]
+rosewater = "#f2d5cf"
+flamingo = "#eebebe"
+pink = "#f4b8e4"
+mauve = "#ca9ee6"
+red = "#e78284"
+maroon = "#ea999c"
+peach = "#ef9f76"
+yellow = "#e5c890"
+green = "#a6d189"
+teal = "#81c8be"
+sky = "#99d1db"
+sapphire = "#85c1dc"
+blue = "#8caaee"
+lavender = "#babbf1"
+text = "#c6d0f5"
+subtext1 = "#b5bfe2"
+subtext0 = "#a5adce"
+overlay2 = "#949cbb"
+overlay1 = "#838ba7"
+overlay0 = "#737994"
+surface2 = "#626880"
+surface1 = "#51576d"
+surface0 = "#414559"
+base = "#303446"
+mantle = "#292c3c"
+crust = "#232634"
+
+[palettes.catppuccin_latte]
+rosewater = "#dc8a78"
+flamingo = "#dd7878"
+pink = "#ea76cb"
+mauve = "#8839ef"
+red = "#d20f39"
+maroon = "#e64553"
+peach = "#fe640b"
+yellow = "#df8e1d"
+green = "#40a02b"
+teal = "#179299"
+sky = "#04a5e5"
+sapphire = "#209fb5"
+blue = "#1e66f5"
+lavender = "#7287fd"
+text = "#4c4f69"
+subtext1 = "#5c5f77"
+subtext0 = "#6c6f85"
+overlay2 = "#7c7f93"
+overlay1 = "#8c8fa1"
+overlay0 = "#9ca0b0"
+surface2 = "#acb0be"
+surface1 = "#bcc0cc"
+surface0 = "#ccd0da"
+base = "#eff1f5"
+mantle = "#e6e9ef"
+crust = "#dce0e8"
+
+[palettes.catppuccin_macchiato]
+rosewater = "#f4dbd6"
+flamingo = "#f0c6c6"
+pink = "#f5bde6"
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+sapphire = "#7dc4e4"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+text = "#cad3f5"
+subtext1 = "#b8c0e0"
+subtext0 = "#a5adcb"
+overlay2 = "#939ab7"
+overlay1 = "#8087a2"
+overlay0 = "#6e738d"
+surface2 = "#5b6078"
+surface1 = "#494d64"
+surface0 = "#363a4f"
+base = "#24273a"
+mantle = "#1e2030"
+crust = "#181926"
