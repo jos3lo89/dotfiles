@@ -1,0 +1,70 @@
+let mapleader = " "
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set visualbell
+set noerrorbells
+set clipboard+=unnamed
+set scrolloff=5
+set highlightedyank
+let g:highlightedyank_highlight_duration = 150
+set easymotion
+set notimeout
+
+vnoremap < <gv
+vnoremap > >gv
+
+" Pane navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-l> <C-w>l
+nnoremap <A-k> <C-w>k
+nnoremap <A-j> <C-w>j
+ 
+" Jump between methods
+nnoremap [[ <Action>(MethodUp)
+nnoremap ]] <Action>(MethodDown)
+
+" Close active tab
+map <leader>q <action>(CloseContent)
+
+" File navigation
+map <leader>ff <action>(GotoFile)
+map <leader>fr <action>(RecentFiles)
+map <leader>fc <action>(FindInPath)
+"map <leader><leader> <Action>(RecentFiles)
+map <leader>fl <action>(RecentLocations)
+"map <leader>fs <action>(NewScratchFile)
+
+" Folding
+map <leader>zc :action CollapseAllRegions<CR>
+map <leader>zo :action ExpandAllRegions<CR>
+
+" Display options
+map <leader>dd <action>(ToggleDistractionFreeMode)
+map <leader>dz <action>(ToggleZenMode)
+map <leader>df <action>(ToggleFullScreen)
+
+" Window splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+" Go to code
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
+nmap <leader>gf <Action>(Back)
+nmap <leader>gb <Action>(Forward)
