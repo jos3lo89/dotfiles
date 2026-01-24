@@ -28,7 +28,9 @@ $time\
 """
 
 add_newline = true
-palette = 'catppuccin_mocha'
+
+# Opciones disponibles: 'kanso_zen', 'kanso_ink', 'kanso_mist', 'kanso_pearl'
+palette = 'kanso_zen'
 
 [fill]
 symbol = ' '
@@ -64,7 +66,6 @@ time_range = '10:00:00-14:00:00'
 disabled = true
 min_time = 500
 format = 'underwent [$duration](bold yellow)'
-
 
 [directory]
 format = '[$path]($style)[$read_only]($read_only_style) '
@@ -195,114 +196,132 @@ style = 'yellow bold'
 # [package]
 
 
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
+[palettes.kanso_zen]
+# Base Colors
+base = "#090E13"      # zenBg0
+mantle = "#1C1E25"    # zenBg1
+crust = "#000000"     # Darker than base
+text = "#C5C9C7"      # fg
+subtext1 = "#A4A7A4"  # gray2
+subtext0 = "#909398"  # gray3
+overlay2 = "#75797f"  # gray4
+overlay1 = "#5C6066"  # gray5
+overlay0 = "#393B44"  # zenBg3
+
+# Main Colors
+red = "#C34043"
+green = "#98BB6C"
+yellow = "#DCA561"
+blue = "#7FB4CA"
+purple = "#938AA9"    # violet
+cyan = "#8ea4a2"      # aqua
+white = "#C5C9C7"
+black = "#090E13"
+
+# Catppuccin Mappings (Compatibility)
+peach = "#b98d7b"     # orange2
+mauve = "#938AA9"     # violet
+pink = "#a292a3"      # pink
+flamingo = "#E46876"  # red2
+rosewater = "#f2f1ef" # fg2
+lavender = "#8992a7"  # violet2
+maroon = "#c4746e"    # red3
+teal = "#7AA89F"      # green5
+sky = "#658594"       # blue2
+sapphire = "#658594"  # blue2
+
+[palettes.kanso_ink]
+# Base Colors
+base = "#14171d"      # inkBg0
+mantle = "#1f1f26"    # inkBg1
 crust = "#11111b"
+text = "#C5C9C7"      # fg
+subtext1 = "#A4A7A4"
+subtext0 = "#909398"
+overlay2 = "#75797f"
+overlay1 = "#4b4e57"  # inkBg4
+overlay0 = "#393B44"  # inkBg3
 
-[palettes.catppuccin_frappe]
-rosewater = "#f2d5cf"
-flamingo = "#eebebe"
-pink = "#f4b8e4"
-mauve = "#ca9ee6"
-red = "#e78284"
-maroon = "#ea999c"
-peach = "#ef9f76"
-yellow = "#e5c890"
-green = "#a6d189"
-teal = "#81c8be"
-sky = "#99d1db"
-sapphire = "#85c1dc"
-blue = "#8caaee"
-lavender = "#babbf1"
-text = "#c6d0f5"
-subtext1 = "#b5bfe2"
-subtext0 = "#a5adce"
-overlay2 = "#949cbb"
-overlay1 = "#838ba7"
-overlay0 = "#737994"
-surface2 = "#626880"
-surface1 = "#51576d"
-surface0 = "#414559"
-base = "#303446"
-mantle = "#292c3c"
-crust = "#232634"
+# Main Colors (Shared with Zen)
+red = "#C34043"
+green = "#98BB6C"
+yellow = "#DCA561"
+blue = "#7FB4CA"
+purple = "#938AA9"
+cyan = "#8ea4a2"
 
-[palettes.catppuccin_latte]
-rosewater = "#dc8a78"
-flamingo = "#dd7878"
-pink = "#ea76cb"
-mauve = "#8839ef"
-red = "#d20f39"
-maroon = "#e64553"
-peach = "#fe640b"
-yellow = "#df8e1d"
-green = "#40a02b"
-teal = "#179299"
-sky = "#04a5e5"
-sapphire = "#209fb5"
-blue = "#1e66f5"
-lavender = "#7287fd"
-text = "#4c4f69"
-subtext1 = "#5c5f77"
-subtext0 = "#6c6f85"
-overlay2 = "#7c7f93"
-overlay1 = "#8c8fa1"
-overlay0 = "#9ca0b0"
-surface2 = "#acb0be"
-surface1 = "#bcc0cc"
-surface0 = "#ccd0da"
-base = "#eff1f5"
-mantle = "#e6e9ef"
-crust = "#dce0e8"
+# Catppuccin Mappings
+peach = "#b98d7b"
+mauve = "#938AA9"
+pink = "#a292a3"
+flamingo = "#E46876"
+rosewater = "#f2f1ef"
+lavender = "#8992a7"
+maroon = "#c4746e"
+teal = "#7AA89F"
+sky = "#658594"
+sapphire = "#658594"
 
-[palettes.catppuccin_macchiato]
-rosewater = "#f4dbd6"
-flamingo = "#f0c6c6"
-pink = "#f5bde6"
-mauve = "#c6a0f6"
-red = "#ed8796"
-maroon = "#ee99a0"
-peach = "#f5a97f"
-yellow = "#eed49f"
-green = "#a6da95"
-teal = "#8bd5ca"
-sky = "#91d7e3"
-sapphire = "#7dc4e4"
-blue = "#8aadf4"
-lavender = "#b7bdf8"
-text = "#cad3f5"
-subtext1 = "#b8c0e0"
-subtext0 = "#a5adcb"
-overlay2 = "#939ab7"
-overlay1 = "#8087a2"
-overlay0 = "#6e738d"
-surface2 = "#5b6078"
-surface1 = "#494d64"
-surface0 = "#363a4f"
-base = "#24273a"
-mantle = "#1e2030"
-crust = "#181926"
+[palettes.kanso_mist]
+# Base Colors
+base = "#22262D"      # mistBg0
+mantle = "#2a2c35"    # mistBg1
+crust = "#1C1E25"
+text = "#C5C9C7"      # fg
+subtext1 = "#A4A7A4"
+subtext0 = "#909398"
+overlay2 = "#75797f"
+overlay1 = "#5C6066"  # mistBg3
+overlay0 = "#393B44"  # mistBg2
+
+# Main Colors
+red = "#C34043"
+green = "#98BB6C"
+yellow = "#DCA561"
+blue = "#7FB4CA"
+purple = "#938AA9"
+cyan = "#8ea4a2"
+
+# Catppuccin Mappings
+peach = "#b98d7b"
+mauve = "#938AA9"
+pink = "#a292a3"
+flamingo = "#E46876"
+rosewater = "#f2f1ef"
+lavender = "#8992a7"
+maroon = "#c4746e"
+teal = "#7AA89F"
+sky = "#658594"
+sapphire = "#658594"
+
+[palettes.kanso_pearl]
+# Base Colors (Light Theme)
+base = "#f2f1ef"      # pearlWhite0
+mantle = "#e2e1df"    # pearlWhite1
+crust = "#dddddb"     # pearlWhite2
+text = "#22262D"      # pearlBlack0 (Fg)
+subtext1 = "#43436c"  # pearlBlack2
+subtext0 = "#545464"  # pearlBlack1
+overlay2 = "#5C6068"  # pearlGray2
+overlay1 = "#6D6D69"  # pearlGray3
+overlay0 = "#9F9F99"  # pearlGray4
+
+# Main Colors
+red = "#c84053"       # pearlRed
+green = "#6f894e"     # pearlGreen
+yellow = "#77713f"    # pearlYellow
+blue = "#4d699b"      # pearlBlue4
+purple = "#624c83"    # pearlViolet4
+cyan = "#597b75"      # pearlAqua
+
+# Catppuccin Mappings
+peach = "#e98a00"     # pearlOrange2
+mauve = "#624c83"     # pearlViolet4
+pink = "#b35b79"      # pearlPink
+flamingo = "#d7474b"  # pearlRed2
+rosewater = "#22262D" # pearlBlack0
+lavender = "#5d57a3"  # pearlBlue5
+maroon = "#e82424"    # pearlRed3
+teal = "#4e8ca2"      # pearlTeal1
+sky = "#6693bf"       # pearlTeal2
+sapphire = "#5a7785"  # pearlTeal3
