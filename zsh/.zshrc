@@ -1,5 +1,3 @@
-
-# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # starship path
@@ -50,11 +48,11 @@ alias dl="docker ps -l -q"
 alias dx="docker exec -it"
 
 # Dirs
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
 
 alias cl='clear'
 alias cls="clear; fastfetch"
