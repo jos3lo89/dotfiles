@@ -51,6 +51,7 @@ show_always = true
 aliases = { "corpuser034g" = "matchai" }
 
 [sudo]
+format = '[$symbol ]($style)'
 style = 'bold green'
 symbol = '󰱯 '
 disabled = false
@@ -89,7 +90,7 @@ read_only = ' '
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
 symbol = " "
-truncation_length = 4
+truncation_length = 6
 truncation_symbol = '…'
 style = 'bold purple'
 # ignore_branches = ['master', 'main']
