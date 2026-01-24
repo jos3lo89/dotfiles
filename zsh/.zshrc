@@ -9,7 +9,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-DISABLE_AUTO_TITLE="true"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,26 +103,41 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+DISABLE_AUTO_TITLE="true"
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
-
-
-
-
-
 eval "$(zoxide init zsh)"
+
 alias lg="lazygit"
-alias ls="eza --icons -l --group-directories-first --no-user --no-time"
-alias ll="eza -lha --icons=auto --sort=name --group-directories-first"
-alias lsd="eza --icons -l --group-directories-first"
-alias  l="eza -lh  --icons=auto"
+
+# eza
+alias l="eza --icons -l --group-directories-first --no-user --no-time --git"
 alias ls="eza -1   --icons=auto"
+alias ll="eza --icons -l -a  --sort=name --group-directories-first --no-user --no-time"
 alias lt="eza --icons=auto --tree"
+alias lt2="eza --tree --level=2 --long --icons --git"
+alias lsd="eza --icons --group-directories-first"
 
+# Docker
+alias dco="docker compose"
+alias dps="docker ps"
+alias dpa="docker ps -a"
+alias dl="docker ps -l -q"
+alias dx="docker exec -it"
 
+# Dirs
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+alias cl='clear'
 alias cls="clear; fastfetch"
-alias c="clear"
-alias nv="nvim"
+
+alias v="nvim"
 
 # fnm
 FNM_PATH="/home/haru/.local/share/fnm"
@@ -139,8 +153,8 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-eval "$(starship init zsh)"
 
+# yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
@@ -148,5 +162,13 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
+
+# cargo - rustc
 . "$HOME/.cargo/env"
+
+# starship path
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
+# starship
+eval "$(starship init zsh)"
