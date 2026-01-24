@@ -1,0 +1,34 @@
+[theme]
+name = "kanso-zen"
+
+[colors]
+# --- Kanso Zen Palette Mapping ---
+
+# Base: El color del texto normal (fg)
+Base = "#C5C9C7"
+
+# Important: Dibuja la atención (usado para la selección/cursor activo)
+# Usamos Kanso Green para que resalte bien sobre el fondo oscuro
+Important = "#98BB6C"
+
+# Title: Títulos de secciones o vistas
+# Usamos Kanso Violet (el color firma de Kanso)
+Title = "#938AA9"
+
+# AlertError: Errores (Red)
+AlertError = "#C34043"
+
+# AlertWarn: Advertencias (Yellow)
+AlertWarn = "#DCA561"
+
+# AlertInfo: Información (Blue)
+AlertInfo = "#7FB4CA"
+
+# Guidance: Texto de ayuda o contexto (gris medio - overlay1)
+Guidance = "#5C6066"
+
+# Annotation: Texto de soporte menos crítico (gris claro - subtext1)
+Annotation = "#A4A7A4"
+
+# Muted: Texto anodino/apagado (usamos el gris oscuro de fondo ZenBg3 para contraste sutil)
+Muted = "#393B44"
