@@ -1,12 +1,18 @@
 {
+  "workbench.colorTheme": "Kanso Zen",
+  "workbench.iconTheme": "material-icon-theme",
+  "reactSnippets.settings.importReactOnTop": false,
   "workbench.startupEditor": "none",
   "window.commandCenter": false,
   "files.exclude": {
     "**/node_modules": true
   },
-  "editor.lineHeight": 1.5,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineHeight": 1.3,
   "editor.fontWeight": "400",
-  "editor.letterSpacing": 0.5,
+  "editor.letterSpacing": 0.4,
   "window.menuBarVisibility": "toggle",
   "editor.fontLigatures": false,
   "vim.easymotion": true,
@@ -21,6 +27,14 @@
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "vim.statusBarColorControl": true,
   "chat.disableAIFeatures": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f87",
+    "statusBar.noFolderBackground": "#005f87",
+    "statusBar.debuggingBackground": "#005f87",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
+
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["<C-h>"],
@@ -183,17 +197,6 @@
     "<C-z>": false,
     "<C-d>": false
   },
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
-  },
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#005f87",
-    "statusBar.noFolderBackground": "#005f87",
-    "statusBar.debuggingBackground": "#005f87",
-    "statusBar.foreground": "#ffffff",
-    "statusBar.debuggingForeground": "#ffffff"
-  },
-  "workbench.iconTheme": "charmed-warm",
   "workbench.activityBar.location": "bottom",
   "workbench.sideBar.location": "right",
   "chat.agent.enabled": false,
@@ -211,9 +214,6 @@
   "editor.renderControlCharacters": false,
   "flash-vscode.caseSensitive": false,
   "editor.formatOnSave": true,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.confirmPasteNative": false,
@@ -221,10 +221,6 @@
   "editor.stickyScroll.scrollWithEditor": false,
   "workbench.tree.enableStickyScroll": false,
   "terminal.integrated.stickyScroll.enabled": false,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.fontSize": 13,
-  "editor.tabSize": 2,
-  "workbench.colorTheme": "Kanso Ink"
+  "editor.fontSize": 14,
+  "editor.tabSize": 2
 }
