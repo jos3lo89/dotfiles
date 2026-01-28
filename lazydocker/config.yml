@@ -1,0 +1,21 @@
+gui:
+  theme:
+    activeBorderColor:
+      - "#938AA9"  # Kanso Violet - Borde activo
+      - bold
+    inactiveBorderColor:
+      - "#5C6066"  # Kanso Gray5 - Borde inactivo
+    optionsTextColor:
+      - "#7FB4CA"  # Kanso Blue - Atajos/teclas
+    selectedLineBgColor:
+      - "#393B44"  # Kanso InkBg3 - Línea seleccionada
+    cherryPickedCommitBgColor:
+      - "#4b4e57"  # Kanso InkBg4 - Cherry-pick fondo
+    cherryPickedCommitFgColor:
+      - "#938AA9"  # Kanso Violet - Cherry-pick texto
+    unstagedChangesColor:
+      - "#C34043"  # Kanso Red - Cambios no stageados
+    defaultFgColor:
+      - "#C5C9C7"  # Kanso Fg - Texto principal
+    searchingActiveBorderColor:
+      - "#DCA561"  # Kanso Yellow - Buscando activo
